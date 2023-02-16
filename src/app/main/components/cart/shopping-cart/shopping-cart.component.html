@@ -1,0 +1,80 @@
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-lg-8 table-responsive mb-5">
+            <table class="table table-light table-borderless table-hover text-center mb-0">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody class="align-middle">
+                    <tr *ngFor="let product of cartProducts; let i = index">
+                        <td class="align-middle"><img src="{{product.item.img}}" style="width: 50px;">
+                            {{product.item.Name}}
+                        </td>
+                        <td class="align-middle">{{product.item.price | currency}}</td>
+                        <td class="align-middle w-100 d-flex align-items-center justify-content-center mt-2"
+                            style="width: 150px;">
+                            <div class="input-group-btn me-2">
+                                <button class="btn btn-sm btn-outline-dark" (click)="min(i)">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                            <input type="text"
+                                class="form-control form-control-sm bg-secondary border-0 text-center w-25"
+                                [(ngModel)]="product.quantity" (change)="changeAmount()">
+                            <div class="input-group-btn ml-2">
+                                <button class="btn btn-sm btn-outline-dark" (click)="add(i)">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td class="align-middle">{{product.item.price * product.quantity | currency}}</td>
+                        <td class="align-middle">
+                            <button class="btn btn-sm btn-danger" (click)="deleteProduct(i)">
+                                <i class="fa fa-times"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-4">
+            <form class="mb-30">
+                <div class="input-group">
+                    <input type="text" class="form-control border-0 p-4" [(ngModel)]="coupon" placeholder="Coupon Code" name="coupon">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" (click)="applyCoupon()" [disabled]="applyDisable">Apply Coupon</button>
+                    </div>
+                </div>
+            </form>
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Cart
+                    Summary</span></h5>
+            <div class="bg-light p-30 mb-5">
+                <div class="border-bottom pb-2">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h6>Coupon</h6>
+                        <h6 class="text-{{couponNameColor}}">{{couponName}}</h6>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-weight-medium">Discount</h6>
+                        <h6 class="font-weight-medium text-danger">-{{couponDiscount | currency}}</h6>
+                    </div>
+                </div>
+                <div class="pt-2">
+                    <div class="d-flex justify-content-between mt-2">
+                        <h5>Total</h5>
+                        <h5>{{total | currency}}</h5>
+                    </div>
+                    <button class="btn btn-block btn-primary font-weight-bold my-3 py-3" [disabled]="sentSuccessfully" (click)="checkout()">Proceed To Checkout</button>
+                </div>
+
+                <div class="alert alert-{{processStatus}} w-100 text-center" *ngIf="successProcess">{{statusResult}}</div>
+            </div>
+        </div>
+    </div>
+</div>

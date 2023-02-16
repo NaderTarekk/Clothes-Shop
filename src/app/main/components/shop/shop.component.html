@@ -1,0 +1,110 @@
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <!-- Shop Sidebar Start -->
+        <div class="col-lg-3 col-md-4">
+            <!-- Price Start -->
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Filter by
+                    price</span></h5>
+            <div class="bg-light p-4 mb-30">
+                <form>
+                    <!-- filter products length-->
+                    <div class="filter">
+                        <span
+                            class="badge border mb-3 font-5 text-dark w-25 text-center">{{filterProductsLength}} - 12</span>
+                    </div>
+
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3"
+                        *ngFor="let price of prices">
+                        <input type="checkbox" class="custom-control-input" [value]="price.price"
+                            (change)="onChange($event)" id="{{price.price}}">
+                        <label class="custom-control-label" for="{{price.price}}">{{price.price | currency}}</label>
+                    </div>
+                </form>
+            </div>
+            <!-- Price End -->
+        </div>
+        <!-- Shop Sidebar End -->
+
+
+        <!-- Shop Product Start -->
+        <div class="col-lg-9 col-md-8">
+            <div class="row pb-3">
+                <div class="col-12 pb-1">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div>
+                            <button class="btn btn-sm btn-light" (click)="row = false"><i
+                                    class="fa fa-th-large"></i></button>
+                            <button class="btn btn-sm btn-light ml-2" (click)="row = true"><i
+                                    class="fa fa-bars"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- first show -->
+                <div class="col-lg-4 col-md-6 col-sm-6 pb-1" *ngFor="let product of products">
+                    <div *ngIf="!row">
+                        <div class="product-item bg-light mb-4">
+                            <div class="product-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="{{product.img}}" routerLink="/details/{{product.id}}">
+                            </div>
+                            <div class="text-center py-4">
+                                <a class="h6 text-decoration-none text-truncate">{{product.Name}}</a>
+                                <div class="d-flex align-items-center justify-content-center mt-2">
+                                    <h5>{{product.price | currency}}</h5>
+                                    <h6 class="text-muted ml-2"><del>{{product.beforeSale | currency}}</del></h6>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center mb-1">
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small>({{product.avaliable}})</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- second show -->
+                <div class="col-md-12 mb-3 pb-1" *ngFor="let product of products | paginate:{
+                    itemsPerPage:tableSize,
+                    currentPage:page,
+                    totalItems:count}; let i = index ">
+                    <div *ngIf="row">
+                        <div class="product bg-light p-2">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="{{product.img}}" class="img-fluid" routerLink="/details/{{product.id}}">
+                                </div>
+                                <div class="col-md-9">
+                                    <h1>{{product.Name}}</h1>
+                                    <p>{{product.description}}</p>
+                                    <div class="d-flex mt-2">
+                                        <span class="text-warning text-bold mr-3">{{product.price | currency}}</span>
+                                        <p class="text-muted text-decoration-line-through">{{product.beforeSale |
+                                            currency}}</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center mb-1">
+                                        <small class="fa fa-star text-primary mr-1"></small>
+                                        <small class="fa fa-star text-primary mr-1"></small>
+                                        <small class="fa fa-star text-primary mr-1"></small>
+                                        <small class="fa fa-star text-primary mr-1"></small>
+                                        <small class="fa fa-star text-primary mr-1"></small>
+                                        <small>({{product.avaliable}})</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- pagination -->
+                <pagination-controls class="text-center text-warning" previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+                </pagination-controls>
+
+            </div>
+        </div>
+        <!-- Shop Product End -->
+    </div>
+</div>

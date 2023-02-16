@@ -1,0 +1,138 @@
+{
+  "posts": [],
+  "ProductsList": [
+    {
+      "id": 1,
+      "img": "../../../../assets/img/product-1.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloribus consectetur itaque facere. Blanditiis consequatur impedit quas mollitia sunt quibusdam praesentium? Et ab accusantium nulla vitae non aliquam quis odio!",
+      "Name": "Black Camera",
+      "price": 199.99,
+      "beforeSale": 300.99,
+      "stars": 5,
+      "avaliable": 34
+    },
+    {
+      "id": 2,
+      "img": "../../../../assets/img/product-2.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloribus consectetur itaque facere. Blanditiis consequatur impedit quas mollitia sunt quibusdam praesentium? Et ab accusantium nulla vitae non aliquam quis odio!",
+      "Name": "Blue T-Shirt",
+      "price": 120,
+      "beforeSale": 299.99,
+      "stars": 4,
+      "avaliable": 99
+    },
+    {
+      "id": 3,
+      "img": "../../../../assets/img/product-3.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloribus consectetur itaque facere. Blanditiis consequatur impedit quas mollitia sunt quibusdam praesentium? Et ab accusantium nulla vitae non aliquam quis odio!",
+      "Name": "Black Shoes",
+      "price": 82.94,
+      "beforeSale": 200,
+      "stars": 5,
+      "avaliable": 66
+    },
+    {
+      "id": 4,
+      "img": "../../../../assets/img/product-4.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloribus consectetur itaque facere. Blanditiis consequatur impedit quas mollitia sunt quibusdam praesentium? Et ab accusantium odio!",
+      "Name": "Black Shoes",
+      "price": 120,
+      "beforeSale": 200,
+      "stars": 4,
+      "avaliable": 99
+    },
+    {
+      "id": 5,
+      "img": "../../../../assets/img/product-5.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloribus consectetur itaque facere. Blanditiis consequatur impedit quas mollitia sunt quibusdam praesentium? Et ab accusantium nulla vitae non aliquam quis odio!",
+      "Name": "Black Shoes",
+      "price": 199.99,
+      "beforeSale": 300,
+      "stars": 5,
+      "avaliable": 99
+    },
+    {
+      "id": 6,
+      "img": "../../../../assets/img/product-6.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloribus consectetur itaque facere. Blanditiis consequatur impedit quas mollitia sunt quibusdam praesentium? Et ab accusantium nulla vitae non aliquam quis odio!",
+      "Name": "Black Shoes",
+      "price": 120,
+      "beforeSale": 200,
+      "stars": 5,
+      "avaliable": 66
+    },
+    {
+      "id": 7,
+      "img": "../../../../assets/img/product-7.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloribus consectetur itaque facere. Blanditiis consequatur impedit",
+      "Name": "Black Shoes",
+      "price": 120,
+      "beforeSale": 299.99,
+      "stars": 4,
+      "avaliable": 34
+    },
+    {
+      "id": 8,
+      "img": "../../../../assets/img/product-8.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloribus consectetur itaque facere. Blanditiis consequatur impedit quas mollitia sunt quibusdam praesentium? Et ab accusantium nulla vitae non aliquam quis odio!",
+      "Name": "Black Shoes",
+      "price": 199.99,
+      "beforeSale": 200,
+      "stars": 5,
+      "avaliable": 99
+    },
+    {
+      "id": 9,
+      "img": "../../../../assets/img/product-9.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloribus consectetur itaque facere. Blanditiis consequatur impedit",
+      "Name": "Black Shoes",
+      "price": 82.94,
+      "beforeSale": 300,
+      "stars": 5,
+      "avaliable": 34
+    },
+    {
+      "id": 10,
+      "img": "../../../../assets/img/product-3.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloribus consectetur itaque facere. Blanditiis consequatur impedit quas mollitia sunt quibusdam praesentium? Et ab accusantium odio!",
+      "Name": "Black Shoes",
+      "price": 120,
+      "beforeSale": 300,
+      "stars": 4,
+      "avaliable": 99
+    },
+    {
+      "id": 11,
+      "img": "../../../../assets/img/product-2.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloribus consectetur itaque facere. Blanditiis consequatur impedit quas mollitia sunt quibusdam praesentium? Et ab accusantium nulla vitae non aliquam quis odio!",
+      "Name": "Black Shoes",
+      "price": 82.94,
+      "beforeSale": 200,
+      "stars": 4,
+      "avaliable": 34
+    },
+    {
+      "id": 12,
+      "img": "../../../../assets/img/product-1.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit doloribus consectetur itaque facere. Blanditiis consequatur impedit",
+      "Name": "Black Shoes",
+      "price": 120,
+      "beforeSale": 299.99,
+      "stars": 4,
+      "avaliable": 66
+    }
+  ],
+  "checkout": [],
+  "customerInfo": [],
+  "Email": [],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
